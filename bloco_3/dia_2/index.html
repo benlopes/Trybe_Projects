@@ -5,15 +5,38 @@
     <title>HTML</title>
     <style>
 
+        body {
+            font-size: 16px;
+        }
+
         h1 {
             font-size: 65px;
+            font-family: sans-serif;
             color: orange;
+            text-decoration: underline overline;
         }
         ul {
             background-color: brown;
+            line-height: 50px;
+            
         }
+        p {
+            font-weight: 600;
+            font-size: 3em;
+            font-style: italic;
+        }
+
         .cor_2 {
             background-color: rgb(255, 87, 27);
+        }
+        #elo {
+            background-color: yellow;
+        }
+        #red {
+            background-color: red;
+        }
+        #brown {
+            background-color: brown;
         }
 
     </style>
@@ -22,16 +45,18 @@
     <h1>Exercícios 3.2</h1>
     <p class="cor_2">Qual é a sua cor favorita?</p>
     <ul class="cor_2">
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+      <li id="elo">Amarelo</li>
+      <li id="red">Vermelho</li>
+      <li id="brown">Marrom</li>
     </ul>
 
     <!-- Exercícios
- - Modifique o tamanho do h1 para 65 pixels V
- - Modifique a cor do texto do h1 para laranja V
- - Modifique a cor de fundo da lista não ordenada V
- - Crie uma classe para modificar a cor de fundo da tag p e da ul ao mesmo tempo V
+     1 - Modifique o família do h1 para sans-serif V
+     2 - Deixe o parágrafo com o font-weight 600 V
+     3 - Modifique o font-size do body para 16px V
+     4 - Coloque o tamanho do parágrafo com o tamanho de 3 vezes o padrão do body V
+     5 - Explore as propriedades font-style, line-height, text-align e text-decoration V
+     6 - Troque a cor de fundo de cada item da lista para a cor correspondente ao texto V
     -->
   </body>
 </html>
