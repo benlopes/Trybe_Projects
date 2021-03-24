@@ -1,0 +1,17 @@
+h1, p {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+
+a:focus {
+    color: red;
+    font-family: 'Roboto';
+}
+
+li:hover {
+    background-color: blueviolet;
+}
