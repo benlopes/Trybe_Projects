@@ -1,0 +1,26 @@
+p {
+    position: absolute;
+    bottom: -150px;
+    left: 50px;
+    z-index: 2;
+}
+
+.baloon {
+    width: 200px;
+    position: absolute;
+    left: 35px;
+    bottom: -200px;
+    z-index: 1;
+    
+}
+
+.super-mario, .goomba, .bowser{
+    width: 200px;
+    margin: 20px;
+}
+.super-mario, .bowser {
+    display: block;
+}
+.bowser {
+    margin-left: 250px;
+}
