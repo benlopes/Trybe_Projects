@@ -1,4 +1,4 @@
-unction isPal(word) {
+function isPal(word){
 	
 	let isPal = false;
 	
