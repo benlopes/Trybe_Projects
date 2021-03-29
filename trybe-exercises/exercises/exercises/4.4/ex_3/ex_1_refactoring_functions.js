@@ -27,7 +27,7 @@ function div(num1, num2) {
 function bigger(num1, num2) {
 
   let bigger;
-  if num1 > num2) {
+  if (num1 > num2) {
     bigger = num1;
   }
   else {
