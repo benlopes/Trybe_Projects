@@ -73,6 +73,14 @@
         }
       }
       
+      // Ex 6. Show p tags content on the console 
+      function showPTag() {
+        let pTag = document.getElementsByTagName('p');
+
+        for (let index = 0; index < pTag.length; index += 1) {
+          console.log(pTag[index].innerText);
+        }
+      }
       
       /*
     Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
