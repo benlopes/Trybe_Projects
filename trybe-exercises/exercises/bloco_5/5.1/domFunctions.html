@@ -63,6 +63,17 @@
         let h1Text = document.getElementById('title');
         h1Text.innerHTML = "Exercício 5.1 - JavaScript";
       }
+      
+      // Ex 5. Change p fonts to uppercase
+      function changeCapPU() {
+        let pTag = document.getElementsByTagName('p');
+
+        for (let index = 0; index < pTag.length; index += 1) {
+          pTag[index].style.textTransform = 'uppercase';
+        }
+      }
+      
+      
       /*
     Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
     - document.getElementById()
