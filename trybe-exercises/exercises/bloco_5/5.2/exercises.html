@@ -136,7 +136,18 @@
         myDivTag.appendChild(myH3);
       }
 
-      
+
+      //2nd part
+      // Ex. 1
+      myH1.className = 'title';
+
+      // Ex. 2
+      let myH3 = document.getElementsByTagName('h3');
+
+      for (let index1 = 0; index1 < 3; index1 += 1) {
+
+        myH3[index1].className = 'description';
+      }
 
       
     </script>
