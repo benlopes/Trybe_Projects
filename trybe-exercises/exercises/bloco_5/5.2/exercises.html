@@ -111,6 +111,23 @@
 
       myDivTag_2.appendChild(myImg);
 
+      // Ex. 8
+      let arrNum = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      let myUl = document.createElement('ul');
+
+      for (let index = 0; index < arrNum.length; index += 1) {
+
+        let myLi = document.createElement('li');    
+
+        myLi.appendChild(document.createTextNode(arrNum[index]));   
+
+        myUl.appendChild(myLi);
+
+      }
+
+      myDivTag_3.appendChild(myUl);
+
       
       
     </script>
