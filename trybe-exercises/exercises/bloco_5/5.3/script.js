@@ -91,3 +91,42 @@ function friButton(sextaFeira) {
 }
 
 friButton(sexta);
+
+// Ex. 5
+let fridays = document.querySelectorAll('.friday');
+let daysForm = 0;
+let dayNum = [];
+
+function changeDaysColor2() {
+  if (daysForm === 0) {
+    for (let index = 0; index < fridays.length; index += 1) {
+      dayNum.push(fridays[index].innerHTML);
+      fridays[index].innerHTML = 'SEXTOU!';
+      daysForm = 1;
+    }
+  }
+  else {
+    for (let index1 = 0; index1 < fridays.length; index1 += 1) {
+      fridays[index1].innerHTML = dayNum[index1];
+      daysForm = 0;
+    }
+  }
+}
+
+let friButton1 = document.getElementById('btn-friday');
+
+friButton1.addEventListener('click', changeDaysColor2);
+
+// Ex. 6
+let day = document.querySelectorAll('.day');
+
+for (let index2 = 0; index2 < day.length; index2 += 1) {
+  day[index2].addEventListener('mouseover', function zoomIn(event) {
+    event.target.style.transform = 'scale(2.0)';
+  })
+}
+for (let index3 = 0; index3 < day.length; index3 += 1) {
+  day[index3].addEventListener('mouseout', function zoomOut(event) {
+    event.target.style.transform = 'scale(1.0)';
+  });
+}
