@@ -130,3 +130,35 @@ for (let index3 = 0; index3 < day.length; index3 += 1) {
     event.target.style.transform = 'scale(1.0)';
   });
 }
+
+// Ex. 7
+let task = 'Estudar';
+let taskDiv = document.querySelector('.my-tasks');
+
+function addTask(word) {
+  let newTask = document.createElement('span');
+  newTask.innerHTML = word;
+  taskDiv.appendChild(newTask);
+}
+
+addTask(task);
+
+// Ex. 8
+let color = 'green';
+let divTask;
+
+function createDiv(cor) {
+  divTask = document.createElement('div');
+  
+  divTask.className = 'task';
+  
+  taskDiv.appendChild(divTask);
+  
+  divTask = document.querySelector('.task');
+
+  divTask.style.backgroundColor = cor;
+
+
+}
+
+createDiv(color);
