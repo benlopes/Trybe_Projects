@@ -44,7 +44,6 @@ function createDays() {
 createDays();
 
 // Ex. 2
-
 function createButton(Feriados) {
   Feriados = document.createElement('button');
   
@@ -56,3 +55,39 @@ function createButton(Feriados) {
 }
 
 createButton();
+
+// Ex. 3
+let holidays = document.querySelectorAll('.holiday');
+let daysColor = 0;
+
+function changeDaysColor() {
+  if (daysColor === 0) {
+    for (let index = 0; index < holidays.length; index += 1) {
+      holidays[index].style.backgroundColor = 'rgb(255,0,255)';
+      daysColor = 1;
+    }
+  }
+  else {
+    for (let index1 = 0; index1 < holidays.length; index1 += 1) {
+      holidays[index1].style.backgroundColor = 'rgb(238,238,238)';
+      daysColor = 0;
+    }
+  }
+}
+
+let holiButton = document.getElementById('btn-holiday');
+
+holiButton.addEventListener('click', changeDaysColor);
+
+// Ex. 4
+let sexta = 'Sexta-feira';
+function friButton(sextaFeira) {
+  let friday = document.createElement('button');
+  
+  friday.id = 'btn-friday';
+  friday.innerHTML = sextaFeira;
+  
+  document.querySelector('.buttons-container').appendChild(friday);
+}
+
+friButton(sexta);
