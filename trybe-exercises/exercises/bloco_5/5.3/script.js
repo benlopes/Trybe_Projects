@@ -162,3 +162,48 @@ function createDiv(cor) {
 }
 
 createDiv(color);
+
+// Ex. 9
+let divState = 0;
+
+function selectDiv() {
+  if (divState === 0) {
+    divTask.classList.add('selected');
+    divTask.style.borderColor ='rgb(0,230,255)';
+    divTask.style.borderWidth = '2.5px';
+    divState = 1;
+  } else {
+    divTask.classList.remove('selected');
+    divTask.style.borderWidth = '0px';
+    divState = 0;
+  }
+}
+
+divTask.addEventListener('click', selectDiv);
+
+// Ex. 10
+let taskColor = 0;
+let elemSelectColor = divTask.style.backgroundColor;
+
+function taskDaysMatchColor(event) {
+  if (taskColor === 0 && divState === 1) {
+    for (let index = 0; index < day.length; index += 1) {
+      event.target.style.color = elemSelectColor;
+      
+      taskColor = 1;
+    }
+  }
+  else {
+    for (let index1 = 0; index1 < day.length; index1 += 1) {
+      event.target.style.color = 'rgb(119,119,119)';
+      
+      taskColor = 0;
+    }
+  }
+}
+
+for (let index4 = 0; index4 < day.length; index4 +=1) {
+  divTask.addEventListener('click', selectDiv);
+
+  day[index4].addEventListener('click', taskDaysMatchColor);
+}
