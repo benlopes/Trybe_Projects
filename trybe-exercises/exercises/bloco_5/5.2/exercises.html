@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // 1st part
+      // Ex. 1
+      let myH1 = document.createElement('h1');
+
+      let h1Text = document.createTextNode('Exercício 5.2 - JavaScript');
+
+      myH1.appendChild(h1Text);
+      document.body.appendChild(myH1);
+
+      // Ex. 2
+      let myDivTag = document.createElement('div');
+
+      myDivTag.className = 'main-content';
+
+      document.body.appendChild(myDivTag);
+
+      // Ex. 3
+      let myDivTag_1 = document.createElement('div');
+
+      myDivTag_1.className = 'center-content';
+
+      myDivTag.appendChild(myDivTag_1);
+
+      // Ex. 4
+      let myPTag = document.createElement('p');
+
+      let myPText = document.createTextNode('Some text indicated by the instructions');
+
+      myPTag.appendChild(myPText);
+
+      myDivTag_1.appendChild(myPTag);
+      
+      // Ex. 5
+      let myDivTag_2 = document.createElement('div');
+
+      myDivTag_2.className = 'left-content';
+
+      myDivTag.appendChild(myDivTag_2);
+
+      // Ex. 6
+      let myDivTag_3 = document.createElement('div');
+
+      myDivTag_3.className = 'right-content';
+
+      myDivTag.appendChild(myDivTag_3);
+
+      // Ex. 7
+      let myImg = document.createElement('img');
+
+      myImg.className = 'small-image';
+      myImg.src = 'https://picsum.photos/200';
+
+      myDivTag_2.appendChild(myImg);
+
+      // Ex. 8
+      let arrNum = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      let myUl = document.createElement('ul');
+
+      for (let index = 0; index < arrNum.length; index += 1) {
+
+        let myLi = document.createElement('li');    
+
+        myLi.appendChild(document.createTextNode(arrNum[index]));   
+
+        myUl.appendChild(myLi);
+
+      }
+
+      myDivTag_3.appendChild(myUl);
+
+      // Ex. 9
+      for (let index1 = 0; index1 < 3; index1 += 1) {
+
+        let myH3 = document.createElement('h3');
+
+        myDivTag.appendChild(myH3);
+      }
+
+
+      //2nd part
+      // Ex. 1
+      myH1.className = 'title';
+
+      // Ex. 2
+      let myH3 = document.getElementsByTagName('h3');
+
+      for (let index1 = 0; index1 < 3; index1 += 1) {
+
+        myH3[index1].className = 'description';
+      }
+
+      // Ex. 3
+      document.getElementsByTagName('div')[0].removeChild(document.getElementsByTagName('div')[0].children[1]);
+
+      // Ex. 4
+      myDivTag_3.style.marginRight = 'auto';
+
+      // Ex. 5
+      myDivTag.style.backgroundColor = 'green';
+
+      // Ex. 6
+      myUl.removeChild(myUl.children[9]);
+      myUl.removeChild(myUl.children[8]);
+
+    </script>
+  </body>
+</html>
